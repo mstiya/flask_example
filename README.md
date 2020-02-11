@@ -11,7 +11,7 @@ An example usage of Flask with webhook on Heroku.
 
 ## Heroku
 
-For full job, you need to do a few things on the Heroku itself:
+For full job, you need to do a few things on the [Heroku](https://www.heroku.com/) itself:
 
 - Create new app on Heroku.
 - Deploy your code. I'am used github.
