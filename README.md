@@ -4,7 +4,7 @@ An example usage of Flask with webhook on Heroku.
 
 ## Requirements
 
-- botapitamtam
+- tamtamapi (WIP)
 - requests
 - Flask
 - gunicorn
