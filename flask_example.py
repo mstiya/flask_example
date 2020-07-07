@@ -18,14 +18,14 @@ def index():
 
 @app.route('/', methods=['POST'])
 def main():
-    update = request.get_json()
+    updates = request.get_json()
     if updates:
         message = bot.get_message_text(updates)
         chat_id = bot.get_chat_id(updates)
         mid = bot.get_mid(updates)
         if message == '/hello':
             bot.reply_message(chat_id, 'Hello!', mid)
-    return jsonify(update)
+    return jsonify(updates)
 
 
 if __name__ == '__main__':
