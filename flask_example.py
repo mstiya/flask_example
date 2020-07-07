@@ -4,7 +4,7 @@
 from flask import jsonify
 from flask import request
 from flask import Flask
-from botapitamtam import BotHandler
+from tamtamapi import Bot
 
 # settings
 bot = BotHandler('token_from_prime_bot')
@@ -19,12 +19,12 @@ def index():
 @app.route('/', methods=['POST'])
 def main():
     update = request.get_json()
-    if update:
-        message = bot.get_text(update)
-        chat_id = bot.get_chat_id(update)
-        mid = bot.get_message_id(update)
+    if updates:
+        message = bot.get_message_text(updates)
+        chat_id = bot.get_chat_id(updates)
+        mid = bot.get_mid(updates)
         if message == '/hello':
-            bot.send_reply_message('Hello!', mid, chat_id)
+            bot.reply_message(chat_id, 'Hello!', mid)
     return jsonify(update)
 
 
